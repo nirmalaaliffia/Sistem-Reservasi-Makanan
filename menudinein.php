@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+				include("koneksi.php"); //agar connect ke database?>
+
 <html lang="en">
 <head>
 	<title>Home</title>
@@ -32,38 +34,8 @@
 <!--===============================================================================================-->
 </head>
 <body class="animsition">
-<?php
-			session_start(); //memulai session
-			if(!isset($_SESSION['nama_customer'])) {
-				header('location:index.php'); 
-			}
-			else { 
-				$nama_customer = $_SESSION['nama_customer']; 
-			}
-		?>
-
-		<?php
-			$id_user = $_SESSION['id_customer'];
-		?>
 
 
-			<?php
-			require_once("koneksi.php"); //agar connect ke database
-			if (@$_POST['masuk']) {
-				$id_user = @$_POST['user'];
-				$id = @$_POST['id'];
-				$tanggal = date("Y-m-d");
-				$cerita = @$_POST['cerita'];
-				$data = "INSERT INTO userdata VALUES ('$iduser', '$id', '$tanggal', '$cerita')"; //fungsi untuk menyimpan data yang diinputkan oleh user ke database
-				$simpan = $connect->query($data);
-				if ($simpan) { //jika cerita berhasil disimpan
-					echo "<script>alert('Cerita Berhasil Disimpan!')</script>";
-				}
-				else { //jika cerita gagal disimpan
-					echo "<script>alert('Cerita Gagal Disimpan!')</script>";
-				}
-			}
-		?>
 
 		
 	<!-- Header -->
@@ -181,6 +153,11 @@
 				</h3>
 			</div>
 	
+			<?php
+$sql='SELECT * FROM menu_makanan as m WHERE jenis_makanan="best_seller"';
+$result = mysqli_query($connect, $sql);
+while($menu_makanan = mysqli_fetch_object($result)){
+?>	
 			<div class="content-intro bg-white p-t-77 p-b-133">
 				<div class="container">
 					<div class="row">
@@ -188,12 +165,12 @@
 							<!-- Block1 -->
 							<div class="blo1">
 								<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom">
-									<a href="#"><img src="images/menubest01.png" alt="IMG-INTRO"></a>
+									<a href="#"><img src="images/<?php echo $menu_makanan->gambar_makanan; ?>" alt="IMG-INTRO"></a>
 								</div>
 	
 								<div class="wrap-text-blo1 p-t-35">
 									<a href="#"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-										Pokat Kocok Chocolate
+									<?php echo $menu_makanan->nama_makanan; ?>
 									</h4></a>
 	
 									<p class="m-b-20">
@@ -202,11 +179,15 @@
 									
 									<h4 style="text-align:center">
 										 <a class="btn" href="#">Add to cart<i class="fa fa-shopping-cart"></i></a> 
-										 <a class="btn btn-primary" href="#">Rp 20.000,-</a></h4>
+										 <a class="btn btn-primary" href="cart.php?id_menu= <?php echo $menu_makanan->id_menu; ?> &action=add">Rp 20.000,-</a></h4>
 
 								</div>
 							</div>
 						</div>
+
+						<?php 
+} 
+?>
 	
 						<div class="col-md-4 p-t-30">
 							<!-- Block1 -->

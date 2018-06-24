@@ -56,7 +56,7 @@ session_start();
 						echo "<script>alert('Berhasil Mendaftar!')</script>";
 						?>
 							<script type="text/javascript">
-								window.location.href="interfacepesanan.php" //jika berhasil registrasi maka akan masuk ke halaman login
+								window.location.href="menudinein.php" //jika berhasil registrasi maka akan masuk ke halaman login
 							</script>
 						<?php
 					}
