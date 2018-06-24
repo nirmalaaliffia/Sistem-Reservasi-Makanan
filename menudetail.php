@@ -1,4 +1,21 @@
-<!DOCTYPE html>
+		<?php
+				require_once("koneksi.php"); //agar connect ke database	?>
+				<?
+					    function getgambar(){
+							$sql='SELECT * FROM menu_makanan WHERE 1';
+							$query = mysqli_query($GLOBALS['conn'], $sql);
+							if (!$query) {
+								die ('SQL Error: ' . mysqli_error($conn));
+						  }
+
+						  $data_array = array();
+						  while($data = mysqli_fetch_assoc($query)){
+							  $data_array[] = $data;
+						  }
+						 return json_encode($data_array);  
+						} 
+ 				   	
+					?>  
 <html lang="en">
 <head>
 	<title>Home</title>
@@ -32,6 +49,7 @@
 <!--===============================================================================================-->
 </head>
 <body class="animsition">
+	
 
 	<!-- Header -->
 	<header>
@@ -167,8 +185,7 @@
 				</h3>
 			</div>            
             </section>
-
-        <section>
+			<section>
             <div class="content-intro bg-white p-t-77 p-b-133">
 				<div class="container">
 					<div class="row">
@@ -308,9 +325,9 @@
                      </div>
 				</div>
 			</div>
-
-            
 		</section>
+
+
 
 
             
