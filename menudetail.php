@@ -227,6 +227,13 @@ while($menu_makanan = mysqli_fetch_object($result)){
             <div class="content-intro bg-white p-t-77 p-b-133">
 				<div class="container">
 					<div class="row">
+					<?php
+$sql='SELECT * FROM menu_makanan as m WHERE jenis_makanan="lunch"';
+$result = mysqli_query($connect, $sql);
+while($menu_makanan = mysqli_fetch_object($result)){
+		?>							
+							
+
                     <div class="col-md-4 p-t-30">
 					<!-- Block1 -->
 					<div class="blo1">
@@ -235,7 +242,7 @@ while($menu_makanan = mysqli_fetch_object($result)){
 						</div>
 						<div class="wrap-text-blo1 p-t-35">
 							<a href="blog-detail.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-								Best Places for Wine
+							<?php echo $menu_makanan->nama_makanan; ?>
 							</h4></a>
 
 							<p class="m-b-20">
@@ -249,117 +256,9 @@ while($menu_makanan = mysqli_fetch_object($result)){
 						</div>
 					</div>
 
-                          <div class="col-md-4 p-t-30">
-					<!-- Block2 -->
-					<div class="blo1">
-						<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-							<a href="blog-detail.html"><img src="images/blog-01.jpg" alt="IMG-INTRO"></a>
-						</div>
-						<div class="wrap-text-blo1 p-t-35">
-							<a href="blog-detail.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-								Best Places for Wine
-							</h4></a>
-
-							<p class="m-b-20">
-								Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.
-							</p>
-                            <h4 style="text-align:center">
-											<a class="btn" href="#">Add to cart<i class="fa fa-shopping-cart"></i></a> 
-											<a class="btn btn-primary" href="#">Rp 30.000,-</a></h4>
-              
-                           </div>    
-						</div>
-					</div>
-
-                          <div class="col-md-4 p-t-30">
-					<!-- Block1 -->
-					<div class="blo1">
-						<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-							<a href="blog-detail.html"><img src="images/blog-01.jpg" alt="IMG-INTRO"></a>
-						</div>
-						<div class="wrap-text-blo1 p-t-35">
-							<a href="blog-detail.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-								Best Places for Wine
-							</h4></a>
-
-							<p class="m-b-20">
-								Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.
-							</p>
-                            <h4 style="text-align:center">
-											<a class="btn" href="#">Add to cart<i class="fa fa-shopping-cart"></i></a> 
-											<a class="btn btn-primary" href="#">Rp 30.000,-</a></h4>
-              
-                           </div>    
-						</div>
-					</div>
-
-                          <div class="col-md-4 p-t-30">
-					<!-- Block3 -->
-					<div class="blo1">
-						<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-							<a href="blog-detail.html"><img src="images/blog-01.jpg" alt="IMG-INTRO"></a>
-						</div>
-						<div class="wrap-text-blo1 p-t-35">
-							<a href="blog-detail.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-								Best Places for Wine
-							</h4></a>
-
-							<p class="m-b-20">
-								Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.
-							</p>
-                            <h4 style="text-align:center">
-											<a class="btn" href="#">Add to cart<i class="fa fa-shopping-cart"></i></a> 
-											<a class="btn btn-primary" href="#">Rp 30.000,-</a></h4>
-              
-                           </div>    
-						</div>
-					</div>
-
-                          <div class="col-md-4 p-t-30">
-					<!-- Block4 -->
-					<div class="blo1">
-						<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-							<a href="blog-detail.html"><img src="images/blog-01.jpg" alt="IMG-INTRO"></a>
-						</div>
-						<div class="wrap-text-blo1 p-t-35">
-							<a href="blog-detail.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-								Best Places for Wine
-							</h4></a>
-
-							<p class="m-b-20">
-								Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.
-							</p>
-                            <h4 style="text-align:center">
-											<a class="btn" href="#">Add to cart<i class="fa fa-shopping-cart"></i></a> 
-											<a class="btn btn-primary" href="#">Rp 30.000,-</a></h4>
-              
-                           </div>    
-						</div>
-					</div>
-
-                          <div class="col-md-4 p-t-30">
-					<!-- Block5 -->
-					<div class="blo1">
-						<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-							<a href="blog-detail.html"><img src="images/blog-01.jpg" alt="IMG-INTRO"></a>
-						</div>
-						<div class="wrap-text-blo1 p-t-35">
-							<a href="blog-detail.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-								Best Places for Wine
-							</h4></a>
-
-							<p class="m-b-20">
-								Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.
-							</p>
-                            <h4 style="text-align:center">
-											<a class="btn" href="#">Add to cart<i class="fa fa-shopping-cart"></i></a> 
-											<a class="btn btn-primary" href="#">Rp 30.000,-</a></h4>
-              
-                           </div>    
-						</div>
-					</div>
-                    
-                    
+<?php
+}
+?>                    
                      </div>
 				</div>
 			</div>
@@ -386,6 +285,14 @@ while($menu_makanan = mysqli_fetch_object($result)){
 				<div class="container">
 					<div class="row">
                     <div class="col-md-4 p-t-30">
+					<?php
+$sql='SELECT * FROM menu_makanan as m WHERE jenis_makanan="dinner"';
+$result = mysqli_query($connect, $sql);
+while($menu_makanan = mysqli_fetch_object($result)){
+		?>							
+							
+
+                    <div class="col-md-4 p-t-30">
 					<!-- Block1 -->
 					<div class="blo1">
 						<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
@@ -393,7 +300,7 @@ while($menu_makanan = mysqli_fetch_object($result)){
 						</div>
 						<div class="wrap-text-blo1 p-t-35">
 							<a href="blog-detail.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-								Best Places for Wine
+							<?php echo $menu_makanan->nama_makanan; ?>
 							</h4></a>
 
 							<p class="m-b-20">
@@ -407,115 +314,9 @@ while($menu_makanan = mysqli_fetch_object($result)){
 						</div>
 					</div>
 
-                          <div class="col-md-4 p-t-30">
-					<!-- Block2 -->
-					<div class="blo1">
-						<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-							<a href="blog-detail.html"><img src="images/blog-01.jpg" alt="IMG-INTRO"></a>
-						</div>
-						<div class="wrap-text-blo1 p-t-35">
-							<a href="blog-detail.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-								Best Places for Wine
-							</h4></a>
-
-							<p class="m-b-20">
-								Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.
-							</p>
-                            <h4 style="text-align:center">
-											<a class="btn" href="#">Add to cart<i class="fa fa-shopping-cart"></i></a> 
-											<a class="btn btn-primary" href="#">Rp 30.000,-</a></h4>
-              
-                           </div>    
-						</div>
-					</div>
-
-                          <div class="col-md-4 p-t-30">
-					<!-- Block1 -->
-					<div class="blo1">
-						<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-							<a href="blog-detail.html"><img src="images/blog-01.jpg" alt="IMG-INTRO"></a>
-						</div>
-						<div class="wrap-text-blo1 p-t-35">
-							<a href="blog-detail.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-								Best Places for Wine
-							</h4></a>
-
-							<p class="m-b-20">
-								Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.
-							</p>
-                            <h4 style="text-align:center">
-											<a class="btn" href="#">Add to cart<i class="fa fa-shopping-cart"></i></a> 
-											<a class="btn btn-primary" href="#">Rp 30.000,-</a></h4>
-              
-                           </div>    
-						</div>
-					</div>
-
-                          <div class="col-md-4 p-t-30">
-					<!-- Block3 -->
-					<div class="blo1">
-						<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-							<a href="blog-detail.html"><img src="images/blog-01.jpg" alt="IMG-INTRO"></a>
-						</div>
-						<div class="wrap-text-blo1 p-t-35">
-							<a href="blog-detail.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-								Best Places for Wine
-							</h4></a>
-
-							<p class="m-b-20">
-								Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.
-							</p>
-                            <h4 style="text-align:center">
-											<a class="btn" href="#">Add to cart<i class="fa fa-shopping-cart"></i></a> 
-											<a class="btn btn-primary" href="#">Rp 30.000,-</a></h4>
-              
-                           </div>    
-						</div>
-					</div>
-
-                          <div class="col-md-4 p-t-30">
-					<!-- Block4 -->
-					<div class="blo1">
-						<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-							<a href="blog-detail.html"><img src="images/blog-01.jpg" alt="IMG-INTRO"></a>
-						</div>
-						<div class="wrap-text-blo1 p-t-35">
-							<a href="blog-detail.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-								Best Places for Wine
-							</h4></a>
-
-							<p class="m-b-20">
-								Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.
-							</p>
-                            <h4 style="text-align:center">
-											<a class="btn" href="#">Add to cart<i class="fa fa-shopping-cart"></i></a> 
-											<a class="btn btn-primary" href="#">Rp 30.000,-</a></h4>
-              
-                           </div>    
-						</div>
-					</div>
-
-                          <div class="col-md-4 p-t-30">
-					<!-- Block5 -->
-					<div class="blo1">
-						<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-							<a href="blog-detail.html"><img src="images/blog-01.jpg" alt="IMG-INTRO"></a>
-						</div>
-						<div class="wrap-text-blo1 p-t-35">
-							<a href="blog-detail.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-								Best Places for Wine
-							</h4></a>
-
-							<p class="m-b-20">
-								Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.
-							</p>
-                            <h4 style="text-align:center">
-											<a class="btn" href="#">Add to cart<i class="fa fa-shopping-cart"></i></a> 
-											<a class="btn btn-primary" href="#">Rp 30.000,-</a></h4>
-              
-                           </div>    
-						</div>
-					</div>
+<?php
+}
+?>
                     
                     
                      </div>
@@ -541,6 +342,14 @@ while($menu_makanan = mysqli_fetch_object($result)){
 				<div class="container">
 					<div class="row">
                     <div class="col-md-4 p-t-30">
+					<?php
+$sql='SELECT * FROM menu_makanan as m WHERE jenis_makanan="beverages"';
+$result = mysqli_query($connect, $sql);
+while($menu_makanan = mysqli_fetch_object($result)){
+		?>							
+							
+
+                    <div class="col-md-4 p-t-30">
 					<!-- Block1 -->
 					<div class="blo1">
 						<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
@@ -548,7 +357,7 @@ while($menu_makanan = mysqli_fetch_object($result)){
 						</div>
 						<div class="wrap-text-blo1 p-t-35">
 							<a href="blog-detail.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-								Best Places for Wine
+							<?php echo $menu_makanan->nama_makanan; ?>
 							</h4></a>
 
 							<p class="m-b-20">
@@ -562,116 +371,9 @@ while($menu_makanan = mysqli_fetch_object($result)){
 						</div>
 					</div>
 
-                          <div class="col-md-4 p-t-30">
-					<!-- Block2 -->
-					<div class="blo1">
-						<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-							<a href="blog-detail.html"><img src="images/blog-01.jpg" alt="IMG-INTRO"></a>
-						</div>
-						<div class="wrap-text-blo1 p-t-35">
-							<a href="blog-detail.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-								Best Places for Wine
-							</h4></a>
-
-							<p class="m-b-20">
-								Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.
-							</p>
-                            <h4 style="text-align:center">
-											<a class="btn" href="#">Add to cart<i class="fa fa-shopping-cart"></i></a> 
-											<a class="btn btn-primary" href="#">Rp 30.000,-</a></h4>
-              
-                           </div>    
-						</div>
-					</div>
-
-                          <div class="col-md-4 p-t-30">
-					<!-- Block1 -->
-					<div class="blo1">
-						<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-							<a href="blog-detail.html"><img src="images/blog-01.jpg" alt="IMG-INTRO"></a>
-						</div>
-						<div class="wrap-text-blo1 p-t-35">
-							<a href="blog-detail.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-								Best Places for Wine
-							</h4></a>
-
-							<p class="m-b-20">
-								Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.
-							</p>
-                            <h4 style="text-align:center">
-											<a class="btn" href="#">Add to cart<i class="fa fa-shopping-cart"></i></a> 
-											<a class="btn btn-primary" href="#">Rp 30.000,-</a></h4>
-              
-                           </div>    
-						</div>
-					</div>
-
-                          <div class="col-md-4 p-t-30">
-					<!-- Block3 -->
-					<div class="blo1">
-						<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-							<a href="blog-detail.html"><img src="images/blog-01.jpg" alt="IMG-INTRO"></a>
-						</div>
-						<div class="wrap-text-blo1 p-t-35">
-							<a href="blog-detail.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-								Best Places for Wine
-							</h4></a>
-
-							<p class="m-b-20">
-								Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.
-							</p>
-                            <h4 style="text-align:center">
-											<a class="btn" href="#">Add to cart<i class="fa fa-shopping-cart"></i></a> 
-											<a class="btn btn-primary" href="#">Rp 30.000,-</a></h4>
-              
-                           </div>    
-						</div>
-					</div>
-
-                          <div class="col-md-4 p-t-30">
-					<!-- Block4 -->
-					<div class="blo1">
-						<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-							<a href="blog-detail.html"><img src="images/blog-01.jpg" alt="IMG-INTRO"></a>
-						</div>
-						<div class="wrap-text-blo1 p-t-35">
-							<a href="blog-detail.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-								Best Places for Wine
-							</h4></a>
-
-							<p class="m-b-20">
-								Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.
-							</p>
-                            <h4 style="text-align:center">
-											<a class="btn" href="#">Add to cart<i class="fa fa-shopping-cart"></i></a> 
-											<a class="btn btn-primary" href="#">Rp 30.000,-</a></h4>
-              
-                           </div>    
-						</div>
-					</div>
-
-                          <div class="col-md-4 p-t-30">
-					<!-- Block5 -->
-					<div class="blo1">
-						<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-							<a href="blog-detail.html"><img src="images/blog-01.jpg" alt="IMG-INTRO"></a>
-						</div>
-						<div class="wrap-text-blo1 p-t-35">
-							<a href="blog-detail.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-								Best Places for Wine
-							</h4></a>
-
-							<p class="m-b-20">
-								Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.
-							</p>
-                            <h4 style="text-align:center">
-											<a class="btn" href="#">Add to cart<i class="fa fa-shopping-cart"></i></a> 
-											<a class="btn btn-primary" href="#">Rp 30.000,-</a></h4>
-              
-                           </div>    
-						</div>
-					</div>
-                    
+<?php
+}
+?>
                     
                      </div>
 				</div>
@@ -696,6 +398,13 @@ while($menu_makanan = mysqli_fetch_object($result)){
             <div class="content-intro bg-white p-t-77 p-b-133">
 				<div class="container">
 					<div class="row">
+					<?php
+$sql='SELECT * FROM menu_makanan as m WHERE jenis_makanan="dessert"';
+$result = mysqli_query($connect, $sql);
+while($menu_makanan = mysqli_fetch_object($result)){
+		?>							
+							
+
                     <div class="col-md-4 p-t-30">
 					<!-- Block1 -->
 					<div class="blo1">
@@ -704,7 +413,7 @@ while($menu_makanan = mysqli_fetch_object($result)){
 						</div>
 						<div class="wrap-text-blo1 p-t-35">
 							<a href="blog-detail.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-								Best Places for Wine
+							<?php echo $menu_makanan->nama_makanan; ?>
 							</h4></a>
 
 							<p class="m-b-20">
@@ -718,116 +427,9 @@ while($menu_makanan = mysqli_fetch_object($result)){
 						</div>
 					</div>
 
-                          <div class="col-md-4 p-t-30">
-					<!-- Block2 -->
-					<div class="blo1">
-						<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-							<a href="blog-detail.html"><img src="images/blog-01.jpg" alt="IMG-INTRO"></a>
-						</div>
-						<div class="wrap-text-blo1 p-t-35">
-							<a href="blog-detail.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-								Best Places for Wine
-							</h4></a>
-
-							<p class="m-b-20">
-								Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.
-							</p>
-                            <h4 style="text-align:center">
-											<a class="btn" href="#">Add to cart<i class="fa fa-shopping-cart"></i></a> 
-											<a class="btn btn-primary" href="#">Rp 30.000,-</a></h4>
-              
-                           </div>    
-						</div>
-					</div>
-
-                          <div class="col-md-4 p-t-30">
-					<!-- Block1 -->
-					<div class="blo1">
-						<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-							<a href="blog-detail.html"><img src="images/blog-01.jpg" alt="IMG-INTRO"></a>
-						</div>
-						<div class="wrap-text-blo1 p-t-35">
-							<a href="blog-detail.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-								Best Places for Wine
-							</h4></a>
-
-							<p class="m-b-20">
-								Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.
-							</p>
-                            <h4 style="text-align:center">
-											<a class="btn" href="#">Add to cart<i class="fa fa-shopping-cart"></i></a> 
-											<a class="btn btn-primary" href="#">Rp 30.000,-</a></h4>
-              
-                           </div>    
-						</div>
-					</div>
-
-                          <div class="col-md-4 p-t-30">
-					<!-- Block3 -->
-					<div class="blo1">
-						<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-							<a href="blog-detail.html"><img src="images/blog-01.jpg" alt="IMG-INTRO"></a>
-						</div>
-						<div class="wrap-text-blo1 p-t-35">
-							<a href="blog-detail.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-								Best Places for Wine
-							</h4></a>
-
-							<p class="m-b-20">
-								Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.
-							</p>
-                            <h4 style="text-align:center">
-											<a class="btn" href="#">Add to cart<i class="fa fa-shopping-cart"></i></a> 
-											<a class="btn btn-primary" href="#">Rp 30.000,-</a></h4>
-              
-                           </div>    
-						</div>
-					</div>
-
-                          <div class="col-md-4 p-t-30">
-					<!-- Block4 -->
-					<div class="blo1">
-						<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-							<a href="blog-detail.html"><img src="images/blog-01.jpg" alt="IMG-INTRO"></a>
-						</div>
-						<div class="wrap-text-blo1 p-t-35">
-							<a href="blog-detail.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-								Best Places for Wine
-							</h4></a>
-
-							<p class="m-b-20">
-								Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.
-							</p>
-                            <h4 style="text-align:center">
-											<a class="btn" href="#">Add to cart<i class="fa fa-shopping-cart"></i></a> 
-											<a class="btn btn-primary" href="#">Rp 30.000,-</a></h4>
-              
-                           </div>    
-						</div>
-					</div>
-
-                          <div class="col-md-4 p-t-30">
-					<!-- Block5 -->
-					<div class="blo1">
-						<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-							<a href="blog-detail.html"><img src="images/blog-01.jpg" alt="IMG-INTRO"></a>
-						</div>
-						<div class="wrap-text-blo1 p-t-35">
-							<a href="blog-detail.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-								Best Places for Wine
-							</h4></a>
-
-							<p class="m-b-20">
-								Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.
-							</p>
-                            <h4 style="text-align:center">
-											<a class="btn" href="#">Add to cart<i class="fa fa-shopping-cart"></i></a> 
-											<a class="btn btn-primary" href="#">Rp 30.000,-</a></h4>
-              
-                           </div>    
-						</div>
-					</div>
-                    
+<?php
+}
+?>
                     
                      </div>
 				</div>
@@ -852,6 +454,13 @@ while($menu_makanan = mysqli_fetch_object($result)){
             <div class="content-intro bg-white p-t-77 p-b-133">
 				<div class="container">
 					<div class="row">
+					<?php
+$sql='SELECT * FROM menu_makanan as m WHERE jenis_makanan="happy_hour"';
+$result = mysqli_query($connect, $sql);
+while($menu_makanan = mysqli_fetch_object($result)){
+		?>							
+							
+
                     <div class="col-md-4 p-t-30">
 					<!-- Block1 -->
 					<div class="blo1">
@@ -860,7 +469,7 @@ while($menu_makanan = mysqli_fetch_object($result)){
 						</div>
 						<div class="wrap-text-blo1 p-t-35">
 							<a href="blog-detail.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-								Best Places for Wine
+							<?php echo $menu_makanan->nama_makanan; ?>
 							</h4></a>
 
 							<p class="m-b-20">
@@ -874,117 +483,9 @@ while($menu_makanan = mysqli_fetch_object($result)){
 						</div>
 					</div>
 
-                          <div class="col-md-4 p-t-30">
-					<!-- Block2 -->
-					<div class="blo1">
-						<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-							<a href="blog-detail.html"><img src="images/blog-01.jpg" alt="IMG-INTRO"></a>
-						</div>
-						<div class="wrap-text-blo1 p-t-35">
-							<a href="blog-detail.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-								Best Places for Wine
-							</h4></a>
-
-							<p class="m-b-20">
-								Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.
-							</p>
-                            <h4 style="text-align:center">
-											<a class="btn" href="#">Add to cart<i class="fa fa-shopping-cart"></i></a> 
-											<a class="btn btn-primary" href="#">Rp 30.000,-</a></h4>
-              
-                           </div>    
-						</div>
-					</div>
-
-                          <div class="col-md-4 p-t-30">
-					<!-- Block1 -->
-					<div class="blo1">
-						<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-							<a href="blog-detail.html"><img src="images/blog-01.jpg" alt="IMG-INTRO"></a>
-						</div>
-						<div class="wrap-text-blo1 p-t-35">
-							<a href="blog-detail.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-								Best Places for Wine
-							</h4></a>
-
-							<p class="m-b-20">
-								Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.
-							</p>
-                            <h4 style="text-align:center">
-											<a class="btn" href="#">Add to cart<i class="fa fa-shopping-cart"></i></a> 
-											<a class="btn btn-primary" href="#">Rp 30.000,-</a></h4>
-              
-                           </div>    
-						</div>
-					</div>
-
-                          <div class="col-md-4 p-t-30">
-					<!-- Block3 -->
-					<div class="blo1">
-						<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-							<a href="blog-detail.html"><img src="images/blog-01.jpg" alt="IMG-INTRO"></a>
-						</div>
-						<div class="wrap-text-blo1 p-t-35">
-							<a href="blog-detail.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-								Best Places for Wine
-							</h4></a>
-
-							<p class="m-b-20">
-								Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.
-							</p>
-                            <h4 style="text-align:center">
-											<a class="btn" href="#">Add to cart<i class="fa fa-shopping-cart"></i></a> 
-											<a class="btn btn-primary" href="#">Rp 30.000,-</a></h4>
-              
-                           </div>    
-						</div>
-					</div>
-
-                          <div class="col-md-4 p-t-30">
-					<!-- Block4 -->
-					<div class="blo1">
-						<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-							<a href="blog-detail.html"><img src="images/blog-01.jpg" alt="IMG-INTRO"></a>
-						</div>
-						<div class="wrap-text-blo1 p-t-35">
-							<a href="blog-detail.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-								Best Places for Wine
-							</h4></a>
-
-							<p class="m-b-20">
-								Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.
-							</p>
-                            <h4 style="text-align:center">
-											<a class="btn" href="#">Add to cart<i class="fa fa-shopping-cart"></i></a> 
-											<a class="btn btn-primary" href="#">Rp 30.000,-</a></h4>
-              
-                           </div>    
-						</div>
-					</div>
-
-                          <div class="col-md-4 p-t-30">
-					<!-- Block5 -->
-					<div class="blo1">
-						<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-							<a href="blog-detail.html"><img src="images/blog-01.jpg" alt="IMG-INTRO"></a>
-						</div>
-						<div class="wrap-text-blo1 p-t-35">
-							<a href="blog-detail.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-								Best Places for Wine
-							</h4></a>
-
-							<p class="m-b-20">
-								Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.
-							</p>
-                            <h4 style="text-align:center">
-											<a class="btn" href="#">Add to cart<i class="fa fa-shopping-cart"></i></a> 
-											<a class="btn btn-primary" href="#">Rp 30.000,-</a></h4>
-              
-                           </div>    
-						</div>
-					</div>
-                    
-                    
+<?php
+}
+?>
                      </div>
 				</div>
 			</div>
