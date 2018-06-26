@@ -29,9 +29,22 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script type="text/javascript" src="js/bridge.js"></script>
 <!--===============================================================================================-->
+
+
 </head>
 <body class="animsition">
+<?php
+		require_once 'classes.php';
+		$userquery = new user();
+		if(isset($_GET['namacustomer']) && isset($_GET['nomeja'])){
+			$nama = $_GET['namacustomer'];
+			$nomer = $_GET['nomeja'];
+			$userId = $userquery->getUserId($nama,$nomer);
+		}
+
+?>
 	<!-- Header -->
 	<header>
 		<!-- Header desktop -->
@@ -74,9 +87,12 @@
 
 						<div class="wrap-btn-slide1 animated visible-false" data-appear="zoomIn">
 							<!-- Button1 -->
-							<a href="menudinein.php" class="btn btn-primary btn-lg btn-block"  name="masuk">
-								DINE IN
-							</a>
+							<?php
+								echo '<button id="dinein" class="btn btn-primary btn-lg btn-block"  name="masuk" onclick="dinein(this.id,'.$userId.')" >
+											DINE IN
+										</button>'
+							?>
+							
 						</div>
 					</div>
 				</div>
@@ -96,9 +112,12 @@
 
 						<div class="wrap-btn-slide1 animated visible-false" data-appear="slideInUp">
 							<!-- Button1 -->
-							<a href="menutakeaway.php" class="btn btn-primary btn-lg btn-block">
-								TAKE AWAY
-							</a>
+							<?php
+								echo '<button id="takeaway" class="btn btn-primary btn-lg btn-block"  name="masuk" onclick="takeaway(this.id,'.$userId.')" >
+											TAKE AWAY
+										</button>'
+							?>
+							
 						</div>
 					</div>
 				</div>
@@ -116,6 +135,7 @@
 
 <!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
+
 <!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/animsition/js/animsition.min.js"></script>
 <!--===============================================================================================-->

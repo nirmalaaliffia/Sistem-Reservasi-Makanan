@@ -157,6 +157,7 @@
 $sql='SELECT * FROM menu_makanan as m WHERE jenis_makanan="best_seller"';
 $result = mysqli_query($connect, $sql);
 while($menu_makanan = mysqli_fetch_object($result)){
+	echo '';
 ?>	
 			<div class="content-intro bg-white p-t-77 p-b-133">
 				<div class="container">
